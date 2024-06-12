@@ -65,14 +65,14 @@ function rotategem(n)
 {
     
     let tile=document.getElementById(n);
-    tile.style.backgroundImage="url(/gem.jpg)";
+    tile.style.backgroundImage="url(https://github.com/Vaishak-09/mines/blob/main/gem.jpg)";
     tile.style.backgroundSize="cover";
     // tile.style.mixBlendMode="multiply";
 }
 function rotatemine(n)
 {
     let tile=document.getElementById(n);
-    tile.style.backgroundImage="url(/gem2.jpg)";
+    tile.style.backgroundImage="url(https://github.com/Vaishak-09/mines/blob/main/gem2.jpg)";
     tile.style.backgroundSize="cover"; 
     setTimeout(cashout,500);
     
