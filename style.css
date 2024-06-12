@@ -3,12 +3,36 @@ body{
     width: 100%;
     height: 100%;
     padding-left: 10%; 
+    
    
 }
+#wallet
+{
+    width: fit-content;
+    height: 15px;
+   border: 1px solid #454d6b;
+    margin-left: 32%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+}
+#wallet1
+{
+    width: fit-content;
+    height: 70%;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
  
 
 #table{
-    margin-top: 25%;
+    margin-top: 10%;
     border:1px solid black;
     /* width: 500px;
     height: 400px; */
