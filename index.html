@@ -48,10 +48,14 @@
             </tr>.
         </table>
         <br>
-        <lable id="betamount">Enter bet amount:</lable>
-        <input type="number" id="betamt" placeholder="Bet amount"><br>
+        <!-- <lable id="betamount">Bet amount:</lable> -->
+        <input type="number" id="betamt" placeholder="Bet amount">
+        <button id="half" onclick="halfamt()">½</button>
+        <button id="double" onclick="doubleamt()">2x</button><br>
         <button type="button" id="bet" placeholder="bet" value="Bet" onclick="bet()">Bet</button>
-   <div id="result">Profit</div>
+   <div id="result">
+    <pre>Multiplier
+Profit</pre></div>
     
 </body>
 </html>

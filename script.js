@@ -1,4 +1,4 @@
-let betf=1,minepos=0;
+let betf=1,minepos=0,betamt=0,multi=1.0;
 function load(){
     for(let i=1;i<=25;i++)
     {
@@ -18,8 +18,12 @@ function bet()
             {
                 document.getElementById(i).disabled=false;
             }
+            multi=1.0;
+            profit();
         document.getElementById('bet').innerHTML="Cashout";
-        document.getElementById('result').style.display="none";
+        document.getElementById('result').style.display="block";
+        betamt=document.getElementById('betamt').value;
+        document.getElementById('betamt').disabled=true;
         for(let i=1;i<=25;i++)
             {
                 document.getElementById(i).style.backgroundImage="none";
@@ -29,13 +33,7 @@ function bet()
     }
     else if(betf==0)
         {
-            for(let i=1;i<=25;i++)
-                {
-                    document.getElementById(i).disabled=true;
-                    document.getElementById(i).style.backgroundImage="none";
-                }
-            document.getElementById('bet').innerHTML="Bet";
-            betf=1;
+            cashout();
         }
 }
 
@@ -65,22 +63,50 @@ function rotategem(n)
 {
     
     let tile=document.getElementById(n);
-    tile.style.backgroundImage="url(https://github.com/Vaishak-09/mines/blob/main/gem.jpg)";
+    tile.style.backgroundImage="url(/gem.jpg)";
     tile.style.backgroundSize="cover";
+    multi=multi*1.14;
+    profit();
     // tile.style.mixBlendMode="multiply";
 }
 function rotatemine(n)
 {
     let tile=document.getElementById(n);
-    tile.style.backgroundImage="url(https://github.com/Vaishak-09/mines/blob/main/gem2.jpg)";
+    tile.style.backgroundImage="url(/gem2.jpg)";
     tile.style.backgroundSize="cover"; 
-    setTimeout(cashout,500);
+    multi=0;
+    cashout();
     
 }
 function cashout()
 {
-    document.getElementById('result').style.display="block";
+    for(let i=1;i<=25;i++)
+        {
+            document.getElementById(i).disabled=true;
+            
+        }
     document.getElementById('bet').innerHTML="Bet";
+    document.getElementById('betamt').disabled=false;
     betf=1;
+    profit();
 
+}
+function profit()
+{
+    multi=multi.toFixed(2)
+    let profit=betamt*multi;
+    profit=profit.toFixed(2)
+    document.getElementById('result').innerHTML="Multiplier:"+multi+"x<br>Profit:"+profit;
+}
+function halfamt()
+{
+    let amt=document.getElementById('betamt').value;
+    amt=amt/2;
+    document.getElementById('betamt').value=amt.toFixed(2);
+}
+function doubleamt()
+{
+    let amt=document.getElementById('betamt').value;
+    amt=amt*2;
+    document.getElementById('betamt').value=amt.toFixed(2);
 }

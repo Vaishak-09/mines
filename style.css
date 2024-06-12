@@ -37,7 +37,8 @@ button{
     color: white;
 }
 #betamt{
-    width: 37%;
+    height:20px;
+    width: 50%;
     background-color: transparent;
     color: white;
     border: 1px solid #454d6b;;
@@ -51,10 +52,23 @@ button{
     /* mix-blend-mode: */
     
 }
+#half
+{
+    width: 10%;
+    border: 1px solid white;
+    color: white;
+}
+#double
+{
+    width: 10%;
+    border: 1px solid white;
+    color: white;
+}
 
 #result
 {
-    width: 100px;
+    width: 75%;
     height: 100px;
-    background-color: white;
+    background-color: rgb(53, 57, 83);
+    color: white;
 }
