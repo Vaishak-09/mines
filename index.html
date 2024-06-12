@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+    <title>Mines</title>
+</head>
+<body onload="load()">
+    
+    
+        <table id="table">
+            <tr>
+                <td><button type="button"  id="1" onclick="checkmine(1)" ></td>
+                <td><button type="button" id="2" onclick="checkmine(2)" ></td>
+                <td><button type="button" id="3" onclick="checkmine(3)"  ></td>
+                <td><button type="button" id="4"  onclick="checkmine(4)" ></td>
+                <td><button type="button" id="5" onclick="checkmine(5)"  ></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="6" onclick="checkmine(6)"  ></td>
+                <td><button type="button" id="7"  onclick="checkmine(7)" ></td>
+                <td><button type="button" id="8" onclick="checkmine(8)"  ></td>
+                <td><button type="button" id="9" onclick="checkmine(9)"  ></td>
+                <td><button type="button" id="10"  onclick="checkmine(10)" ></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="11" onclick="checkmine(11)"  ></td>
+                <td><button type="button" id="12"  onclick="checkmine(12)" ></td>
+                <td><button type="button" id="13"  onclick="checkmine(13)" ></td>
+                <td><button type="button" id="14"  onclick="checkmine(14)" ></td>
+                <td><button type="button" id="15"  onclick="checkmine(15)" ></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="16"  onclick="checkmine(16)" ></td>
+                <td><button type="button" id="17"  onclick="checkmine(17)" ></td>
+                <td><button type="button" id="18"  onclick="checkmine(18)" ></td>
+                <td><button type="button" id="19"  onclick="checkmine(19)" ></td>
+                <td><button type="button" id="20"  onclick="checkmine(20)" ></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="21"  onclick="checkmine(21)" ></td>
+                <td><button type="button" id="22" onclick="checkmine(22)"  ></td>
+                <td><button type="button" id="23"  onclick="checkmine(23)" ></td>
+                <td><button type="button" id="24"  onclick="checkmine(24)" ></td>
+                <td><button type="button" id="25"  onclick="checkmine(25)" ></td>
+            </tr>.
+        </table>
+        <br>
+        <lable id="betamount">Enter bet amount:</lable>
+        <input type="number" id="betamt" placeholder="Bet amount"><br>
+        <button type="button" id="bet" placeholder="bet" value="Bet" onclick="bet()">Bet</button>
+   <div id="result">Profit</div>
+    
+</body>
+</html>

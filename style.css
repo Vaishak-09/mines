@@ -1,0 +1,60 @@
+body{
+    background-color: #202432;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%; 
+   
+}
+ 
+
+#table{
+    margin-top: 25%;
+    border:1px solid black;
+    /* width: 500px;
+    height: 400px; */
+    color: white;
+    border: transparent;
+    width:auto;
+    height: auto;
+    
+    
+}
+td{
+    border: 1px solid #454d6b;
+    /* box-shadow: 1px 1px 0px 1px #454d6b;
+    box-shadow: -1px -1px 100px 3px #454d6b; */
+    width: 14vw;
+    height:7vh;
+   
+    
+}
+button{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+#betamount{
+    color: white;
+}
+#betamt{
+    width: 37%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #454d6b;;
+}
+#bet
+{
+    width: 75%;
+    height: 4vh;
+    margin-top: 2%;
+    background-color: greenyellow;
+    /* mix-blend-mode: */
+    
+}
+
+#result
+{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
