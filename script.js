@@ -148,6 +148,10 @@ function doubleamt()
 {
     let amt=document.getElementById('betamt').value;
     amt=amt*2;
+    if(amt>bal)
+        {
+            amt=bal;
+        }
     document.getElementById('betamt').value=amt.toFixed(2);
 }
 
