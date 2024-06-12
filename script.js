@@ -24,6 +24,8 @@ function bet()
         document.getElementById('result').style.display="block";
         betamt=document.getElementById('betamt').value;
         document.getElementById('betamt').disabled=true;
+        document.getElementById('half').disabled=true;
+        document.getElementById('double').disabled=true;
         for(let i=1;i<=25;i++)
             {
                 document.getElementById(i).style.backgroundImage="none";
@@ -63,6 +65,7 @@ function rotategem(n)
 {
     
     let tile=document.getElementById(n);
+    tile.disabled=true;
     tile.style.backgroundImage="url(/gem.jpg)";
     tile.style.backgroundSize="cover";
     multi=multi*1.14;
