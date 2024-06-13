@@ -40,6 +40,7 @@ function bet()
                 document.getElementById(i).style.backgroundImage="none";
             }
         minepos=mineposition();
+        document.getElementById('bet').disabled=true;
         }else{
             alert("low balance");
             betf=1;
@@ -79,7 +80,8 @@ if(n==minepos)
 }
 function rotategem(n)
 {
-    
+
+    document.getElementById('bet').disabled=false;
     let tile=document.getElementById(n);
     tile.disabled=true;
     tile.style.backgroundImage="url(gem.jpg)";
