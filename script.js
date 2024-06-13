@@ -42,6 +42,7 @@ function bet()
         minepos=mineposition();
         }else{
             alert("low balance");
+            betf=1;
         }
            
     }
