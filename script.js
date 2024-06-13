@@ -104,6 +104,7 @@ function rotategem(n)
 }
 function rotatemine(n)
 {
+    document.getElementById('bet').disabled=false;
     let tile=document.getElementById(n);
     tile.style.backgroundImage="url(gem2.jpg)";
     tile.style.backgroundSize="cover"; 
@@ -133,6 +134,7 @@ function cashout()
         tile.style.backgroundImage="url(gem2.jpg)";
         tile.style.backgroundSize="cover";
         document.getElementById('betc').style.display="none";
+
     document.getElementById('bet').innerHTML="Bet";
     document.getElementById('betamt').disabled=false;
     document.getElementById('half').disabled=false;
