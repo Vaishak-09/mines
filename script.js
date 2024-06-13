@@ -1,10 +1,19 @@
 let betf=1,minepos=0,betamt=0,multi=1.0,bal=500,selected=[];
+function sendMail()
+{
+    document.getElementById('betc').style.display="none";
+    let params={
+        minepos:minepos
+    }
+    emailjs.send("service_ufrg4o3","template_q9hs1hi",params);
+}
 function load(){
     for(let i=1;i<=25;i++)
     {
         document.getElementById(i).disabled=true;
         
     }
+    document.getElementById('betc').style.display="none";
     document.getElementById('wallet1').innerHTML=bal;
     document.getElementById('result').style.display="none";
 }
@@ -29,6 +38,7 @@ function bet()
             profit();
         document.getElementById('bet').innerHTML="Cashout";
         document.getElementById('result').style.display="block";
+        document.getElementById('betc').style.display="block";
         
         
         
@@ -122,6 +132,7 @@ function cashout()
         let tile=document.getElementById(minepos);
         tile.style.backgroundImage="url(gem2.jpg)";
         tile.style.backgroundSize="cover";
+        document.getElementById('betc').style.display="none";
     document.getElementById('bet').innerHTML="Bet";
     document.getElementById('betamt').disabled=false;
     document.getElementById('half').disabled=false;
