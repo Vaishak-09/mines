@@ -98,8 +98,9 @@ function rotategem(n)
     document.getElementById('bet').disabled=false;
     let tile=document.getElementById(n);
     tile.disabled=true;
-    tile.style.backgroundImage="url(gem.jpg)";
+    tile.style.backgroundImage="url(gemn.jpg)";
     tile.style.backgroundSize="cover";
+    tile.style.backgroundRepeat="no-repeat";
     multi=multi*1.14;
     selected.push(n);
     profit();
@@ -124,7 +125,7 @@ function cashout()
             
             let tile=document.getElementById(i);
     tile.disabled=true;
-    tile.style.backgroundImage="url(gem.jpg)";
+    tile.style.backgroundImage="url(gemn.jpg)";
     tile.style.backgroundSize="cover";
     tile.style.mixBlendMode="multiply";
     
