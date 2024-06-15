@@ -23,7 +23,9 @@ body{
 {
     width: fit-content;
     height: 70%;
+    font-weight: bolder;
     border: transparent;
+    padding-top: 3px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,22 +1,14 @@
 let betf=1,minepos=0,betamt=0,multi=1.0,bal=500,adminf=0;
-// function sendMail()
-// {
-//     document.getElementById('betc').style.display="none";
-    
-// }
 function load(){
     for(let i=1;i<=25;i++)
     {
         document.getElementById(i).disabled=true;
         
     }
-    // document.getElementById('betc').style.display="none";
     document.getElementById('wallet1').innerHTML=bal;
     document.getElementById('result').style.display="none";
 }
     
-
-
 function bet()
 {
     if(betf==1)
@@ -24,8 +16,8 @@ function bet()
         betf=0;
         selected=[];
         betamt=document.getElementById('betamt').value;
-        subbal(betamt);
-        if(bal>=0){
+        ;
+        if(subbal(betamt)){
         for(let i=1;i<=25;i++)
             {
                 document.getElementById(i).disabled=false;
@@ -35,10 +27,6 @@ function bet()
             profit();
         document.getElementById('bet').innerHTML="Cashout";
         document.getElementById('result').style.display="block";
-        // document.getElementById('betc').style.display="block";
-        
-        
-        
         document.getElementById('betamt').disabled=true;
         document.getElementById('half').disabled=true;
         document.getElementById('double').disabled=true;
@@ -76,6 +64,7 @@ function mineposition()
         }
     return pos;
 }
+
 function checkmine(n)
 {
 if(n==minepos)
@@ -92,6 +81,7 @@ if(n==minepos)
         rotategem(n);
     }
 }
+
 function rotategem(n)
 {
 
@@ -104,9 +94,8 @@ function rotategem(n)
     multi=multi*1.14;
     selected.push(n);
     profit();
-    
-    // tile.style.mixBlendMode="multiply";
 }
+
 function rotatemine(n)
 {
     document.getElementById('bet').disabled=false;
@@ -118,28 +107,26 @@ function rotatemine(n)
     cashout();
     
 }
+
 function cashout()
 {
     for(let i=1;i<=25;i++)
-        {
-            
+    {
             let tile=document.getElementById(i);
-    tile.disabled=true;
-    tile.style.backgroundImage="url(gemn.jpg)";
-    tile.style.backgroundSize="cover";
-    tile.style.mixBlendMode="multiply";
+            tile.disabled=true;
+            tile.style.backgroundImage="url(gemn.jpg)";
+            tile.style.backgroundSize="cover";
+            tile.style.mixBlendMode="multiply";
     
-        }
-        for(let j=0;j<selected.length;j++)
-            {
-                document.getElementById(selected[j]).style.mixBlendMode="normal";
-            }
+    }
+    for(let j=0;j<selected.length;j++)
+    {
+        document.getElementById(selected[j]).style.mixBlendMode="normal";
+    }
         
-        let tile=document.getElementById(minepos);
-        tile.style.backgroundImage="url(gem2.jpg)";
-        tile.style.backgroundSize="cover";
-        // document.getElementById('betc').style.display="none";
-
+    let tile=document.getElementById(minepos);
+    tile.style.backgroundImage="url(gem2.jpg)";
+    tile.style.backgroundSize="cover";
     document.getElementById('bet').innerHTML="Bet";
     document.getElementById('betamt').disabled=false;
     document.getElementById('half').disabled=false;
@@ -150,29 +137,31 @@ function cashout()
 }
 function profit()
 {
-     let multi1=multi.toFixed(2)
+    let multi1=multi.toFixed(2)
     let profit=betamt*multi1;
     profit=profit.toFixed(2);
     document.getElementById('result').innerHTML="Multiplier:"+multi1+"x<br>Profit:"+profit;
     if(betf==1&&multi!=0)
-        {
-            addbal(profit);
-        }
+    {
+        addbal(profit);
+    }
 }
+
 function halfamt()
 {
     let amt=document.getElementById('betamt').value;
     amt=amt/2;
     document.getElementById('betamt').value=amt.toFixed(2);
 }
+
 function doubleamt()
 {
     let amt=document.getElementById('betamt').value;
     amt=amt*2;
     if(amt>bal)
-        {
-            amt=bal;
-        }
+    {
+        amt=bal;
+    }
     document.getElementById('betamt').value=amt.toFixed(2);
 }
 
@@ -183,25 +172,28 @@ function addbal(amt)
     
     document.getElementById('wallet1').innerText=bal;
 }
+
 function subbal(amt)
 {
     amt=Number(amt);
-    bal=bal-amt;
-    if(bal>=0)
-        {
-    document.getElementById('wallet1').innerText=bal;  
-        }
+    if(bal-amt>=0)
+    {
+        document.getElementById('wallet1').innerText=bal-amt;  
+        return true
+    }
+    else{
+        return false
+    }
 }
 
-function change(){
+function change()
+{
     if(adminf==0)
         {
             adminf=1;
-            // console.log('Admin Switch is ON');
         } else
         {
             adminf=0;
-            // console.log('Admin Switch is OFF');
         }
 }
 

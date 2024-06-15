@@ -17,7 +17,7 @@
    })();
 </script>
 </head>
-<body onload="load()">
+<body onload="load()" id="main">
     <div id="wallet"><button type="button" id="wallet1"></button>Rs&nbsp;
     <label class="switch">
         <input type="checkbox" placeholder="a" onclick="change()">
@@ -62,14 +62,10 @@
             </tr>.
         </table>
         <br>
-        <!-- <lable id="betamount">Bet amount:</lable> -->
         <input type="number" id="betamt" placeholder="Bet amount">
-        <button id="half" onclick="halfamt()">½</button>
+        <button  id="half" onclick="halfamt()">½</button>
         <button id="double" onclick="doubleamt()">2x</button><br>
-        <button type="button" id="bet" placeholder="bet" value="Bet" onclick="bet()">Bet</button>
-        <!-- <button type="button" id="betc"  value="Bet"  onclick="sendMail()">confirm</button> -->
-        
-    
+        <button type="button" id="bet" placeholder="bet" value="Bet" onclick="bet()">Bet</button>     
    <div id="result">
     <pre>Multiplier
 Profit</pre></div>
