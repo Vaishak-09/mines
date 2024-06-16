@@ -152,6 +152,8 @@ function profit()
 function halfamt()
 {
     let amt=document.getElementById('betamt').value;
+    if(amt==0.01)
+        {amt=0;}
     amt=amt/2;
     document.getElementById('betamt').value=amt.toFixed(2);
 }
