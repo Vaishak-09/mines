@@ -1,10 +1,12 @@
 let betf=1,minepos=0,betamt=0,multi=1.0,bal=500,adminf=0;
+
 function load(){
     for(let i=1;i<=25;i++)
     {
         document.getElementById(i).disabled=true;
         
     }
+    document.getElementById('betamt').value=betamt;
     document.getElementById('wallet1').innerHTML=bal;
     document.getElementById('result').style.display="none";
 }
@@ -139,7 +141,7 @@ function profit()
 {
     let multi1=multi.toFixed(2)
     let profit=betamt*multi1;
-    profit=profit.toFixed(2);
+    profit=profit.toFixed(2)-betamt;
     document.getElementById('result').innerHTML="Multiplier:"+multi1+"x<br>Profit:"+profit;
     if(betf==1&&multi!=0)
     {
@@ -156,13 +158,26 @@ function halfamt()
 
 function doubleamt()
 {
+    
     let amt=document.getElementById('betamt').value;
+    if(amt==0)
+        {
+            amt=0.01;
+            document.getElementById('betamt').value=amt;
+        }
+    else if(amt==0.64)
+            {
+                amt=1;
+            document.getElementById('betamt').value=amt;
+            }
+    else{
     amt=amt*2;
     if(amt>bal)
     {
         amt=bal;
     }
     document.getElementById('betamt').value=amt.toFixed(2);
+}
 }
 
 function addbal(amt)
