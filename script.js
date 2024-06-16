@@ -1,4 +1,4 @@
-let betf=1,minepos=0,betamt=0,multi=1.0,bal=1000,adminf=0;
+let betf=1,minepos=0,betamt=0,multi=1.0,bal=500,adminf=0;
 
 function load(){
     for(let i=1;i<=25;i++)
@@ -185,15 +185,15 @@ function addbal(amt)
     amt=Number(amt);
     bal=bal+amt;
     
-    document.getElementById('wallet1').innerText=bal;
+    document.getElementById('wallet1').innerText=bal.toFixed(2);
 }
 
 function subbal(amt)
 {
     amt=Number(amt);
-    if(bal-amt>=0)
+    if(bal-amt>=0.0)
     {
-        document.getElementById('wallet1').innerText=bal-amt;  
+        document.getElementById('wallet1').innerText=(bal-amt).toFixed(2);  
         return true
     }
     else{
