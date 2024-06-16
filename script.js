@@ -1,4 +1,4 @@
-let betf=1,minepos=0,betamt=0,multi=1.0,bal=0,adminf=0;
+let betf=1,minepos=0,betamt=0,multi=1.0,bal=1000,adminf=0;
 
 function load(){
     for(let i=1;i<=25;i++)
