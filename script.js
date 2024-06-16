@@ -141,8 +141,8 @@ function profit()
 {
     let multi1=multi.toFixed(2)
     let profit=betamt*multi1;
-    profit=profit.toFixed(2)-betamt;
-    document.getElementById('result').innerHTML="Multiplier:"+multi1+"x<br>Profit:"+profit;
+    profit=profit-betamt;
+    document.getElementById('result').innerHTML="Multiplier:"+multi1+"x<br>Profit:"+profit.toFixed(2);
     if(betf==1&&multi!=0)
     {
         addbal(profit);
